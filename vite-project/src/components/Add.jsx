@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function ({ addIncome, addExpense }) {
+export default function Add({ addIncome, addExpense }) {
   const [amount, setAmount] = useState("");
   const [text, setText] = useState("");
 
@@ -9,9 +9,9 @@ export default function ({ addIncome, addExpense }) {
     const transactionAmount = parseInt(amount);
     if (!isNaN(transactionAmount)) {
       if (transactionAmount > 0) {
-        addIncome(transactionAmount);
+        addIncome(transactionAmount, text);
       } else {
-        addExpense(Math.abs(transactionAmount));
+        addExpense(Math.abs(transactionAmount), text); // Corrected here
       }
       setAmount("");
       setText("");

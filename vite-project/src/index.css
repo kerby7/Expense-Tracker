@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0;
   padding: 0;
@@ -5,78 +9,51 @@
   font-family: "Nunito", sans-serif;
 }
 
-.main{
+body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  height: 100vh;
 }
 
-.header {
-  text-align: center;
-  margin-top: 5rem;
-  font-size: 1.5rem;
-}
-
-.balance {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 4rem;
-  width: 80vw;
-}
-
-.balance-heading{
-  font-size: 0.8rem;
-}
-
-.balance-money{
-  font-weight: 400;
-  font-size: 1.8rem;
-}
-
-.container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.amount{
+.amount {
   margin-top: 2rem;
-  width: 30vw;
+  width: 15vw;
   display: flex;
   height: 10vh;
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
 }
 
-.expense{
+.expense {
   border-left: 0.1rem solid grey;
   padding-left: 2rem;
 }
 
-.income-heading{
+.income-heading {
   font-size: 0.8rem;
 }
 
-.money-1{
+.money-1 {
   color: rgb(16, 181, 126);
 }
 
-.money-2{
+.money-2 {
   color: red;
 }
 
-.history{
+.history {
   height: 20vh;
   width: 30vw;
-  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.history-heading{
+.history-heading {
   text-align: start;
   font-size: 0.8rem;
   margin-top: 2rem;
@@ -85,41 +62,81 @@
   padding-bottom: 0.5rem;
 }
 
-.transaction{
-  margin-top: 3rem;
-  width: 30vw;
+.history-list {
+  margin-top: 2rem;
+}
+
+.history-list li {
+  list-style: none;
+  background: rgb(255, 255, 255);
+  height: 40px;
+  width: 300px;
+  padding: 0.6rem;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+  margin-top: 1rem;
+}
+
+.texty {
+  font-size: 0.9rem;
+}
+
+.amounty {
+  font-size: 0.9rem;
+  font-weight: 500;
+  position: fixed;
+  left: 55%;
+}
+
+.transaction {
+  margin-top: 8rem;
+  width: 50vw;
   height: 30vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.transaction h3{
+.transaction h3 {
   font-size: 0.8rem;
   border-bottom: 1px solid black;
+
   padding: 0.2rem;
   margin-bottom: 1rem;
 }
 
-.amount-enter{
+.amount-enter {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  margin-bottom: 20px;
 }
 
-h4{
+.expense-text,
+.expense-amount {
+  /* Add padding to input fields to create space */
+  padding: 8px;
+  /* Add margin to create space between input fields */
+  margin-bottom: 10px;
+}
+
+h4 {
   font-size: 0.7rem;
 }
 
-.expense-text{
+.expense-text {
   height: 3vh;
+  width: 10vw;
 }
 
-.expense-amount{
+.expense-amount {
   height: 3vh;
+  width: 10vw;
 }
 
-.btn{
+.btn {
   height: 3vh;
+  width: 10vw;
   background-color: blueviolet;
   color: white;
   border: none;
